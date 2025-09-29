@@ -6,6 +6,7 @@ namespace HomeNest.Infrastructure.Repositories.UnitOfWork;
 public interface IUnitOfWork : IDisposable
 {
     IGenericRepository<User> Users { get; }
+    IGenericRepository<UserSession> UserSessions { get; }
     IGenericRepository<Product> Products { get; }
     IGenericRepository<Order> Orders { get; }
     IGenericRepository<Payment> Payments { get; }

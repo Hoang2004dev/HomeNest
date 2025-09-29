@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace HomeNest.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(HomeNestDbContext))]
-    [Migration("20250929042044_UpdateEnumsToString")]
-    partial class UpdateEnumsToString
+    [Migration("20250929091035_ChangeToTimestamptz")]
+    partial class ChangeToTimestamptz
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,7 +50,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -80,7 +80,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("updated_at")
                         .HasDefaultValueSql("now()");
 
@@ -111,7 +111,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -138,7 +138,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -196,7 +196,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -212,7 +212,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("updated_at")
                         .HasDefaultValueSql("now()");
 
@@ -235,7 +235,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -265,7 +265,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("updated_at")
                         .HasDefaultValueSql("now()");
 
@@ -333,7 +333,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -387,7 +387,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -425,7 +425,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("updated_at")
                         .HasDefaultValueSql("now()");
 
@@ -450,7 +450,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -565,7 +565,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -606,7 +606,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -650,7 +650,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("UpdatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("updated_at")
                         .HasDefaultValueSql("now()");
 
@@ -674,7 +674,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -684,7 +684,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
                         .HasColumnName("device_info");
 
                     b.Property<DateTime>("ExpiryDate")
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("expiry_date");
 
                     b.Property<string>("IpAddress")
@@ -735,7 +735,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 
@@ -815,7 +815,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("UsedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("used_at")
                         .HasDefaultValueSql("now()");
 
@@ -850,7 +850,7 @@ namespace HomeNest.Infrastructure.Data.Migrations
 
                     b.Property<DateTime?>("CreatedAt")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("timestamp without time zone")
+                        .HasColumnType("timestamptz")
                         .HasColumnName("created_at")
                         .HasDefaultValueSql("now()");
 

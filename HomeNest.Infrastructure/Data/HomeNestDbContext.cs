@@ -75,7 +75,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Content).HasColumnName("content");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.Slug)
                 .HasMaxLength(200)
@@ -91,7 +91,7 @@ public partial class HomeNestDbContext : DbContext
                 .HasColumnName("title");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("updated_at");
 
             entity.HasOne(d => d.Author).WithMany(p => p.BlogPosts)
@@ -111,7 +111,7 @@ public partial class HomeNestDbContext : DbContext
                 .HasColumnName("country");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
@@ -127,7 +127,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
@@ -166,7 +166,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
@@ -174,7 +174,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.ParentId).HasColumnName("parent_id");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("updated_at");
 
             entity.HasOne(d => d.Parent).WithMany(p => p.InverseParent)
@@ -192,7 +192,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.PaymentMethod)
                 .HasConversion<string>()
@@ -209,7 +209,7 @@ public partial class HomeNestDbContext : DbContext
                 .HasColumnName("total_price");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("updated_at");
             entity.Property(e => e.UserId).HasColumnName("user_id");
 
@@ -254,7 +254,7 @@ public partial class HomeNestDbContext : DbContext
                 .HasColumnName("amount");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.PaymentMethod)
@@ -287,7 +287,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.CategoryId).HasColumnName("category_id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.ImageUrl).HasColumnName("image_url");
@@ -306,7 +306,7 @@ public partial class HomeNestDbContext : DbContext
                 .HasColumnName("stock");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("updated_at");
 
             entity.HasOne(d => d.Brand).WithMany(p => p.Products)
@@ -327,7 +327,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.DiscountType)
@@ -398,7 +398,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Comment).HasColumnName("comment");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.ProductId).HasColumnName("product_id");
             entity.Property(e => e.Rating).HasColumnName("rating");
@@ -425,7 +425,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Address).HasColumnName("address");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.Email)
                 .HasMaxLength(150)
@@ -450,7 +450,7 @@ public partial class HomeNestDbContext : DbContext
                 .HasColumnName("status");
             entity.Property(e => e.UpdatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("updated_at");
         });
 
@@ -465,13 +465,13 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.DeviceInfo)
                 .HasMaxLength(255)
                 .HasColumnName("device_info");
             entity.Property(e => e.ExpiryDate)
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("expiry_date");
             entity.Property(e => e.IpAddress)
                 .HasMaxLength(50)
@@ -504,7 +504,7 @@ public partial class HomeNestDbContext : DbContext
                 .HasColumnName("code");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.Description).HasColumnName("description");
             entity.Property(e => e.DiscountType)
@@ -544,7 +544,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.OrderId).HasColumnName("order_id");
             entity.Property(e => e.UsedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("used_at");
             entity.Property(e => e.UserId).HasColumnName("user_id");
             entity.Property(e => e.VoucherId).HasColumnName("voucher_id");
@@ -574,7 +574,7 @@ public partial class HomeNestDbContext : DbContext
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("now()")
-                .HasColumnType("timestamp without time zone")
+                .HasColumnType("timestamptz")
                 .HasColumnName("created_at");
             entity.Property(e => e.ProductId).HasColumnName("product_id");
             entity.Property(e => e.UserId).HasColumnName("user_id");

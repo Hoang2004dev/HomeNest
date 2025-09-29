@@ -10,6 +10,7 @@ public class UnitOfWork : IUnitOfWork
     private readonly HomeNestDbContext _context;
 
     public IGenericRepository<User> Users { get; }
+    public IGenericRepository<UserSession> UserSessions { get; }
     public IGenericRepository<Product> Products { get; }
     public IGenericRepository<Order> Orders { get; }
     public IGenericRepository<Payment> Payments { get; }
@@ -20,6 +21,7 @@ public class UnitOfWork : IUnitOfWork
     {
         _context = context;
         Users = new GenericRepository<User>(context);
+        UserSessions = new GenericRepository<UserSession>(context);
         Products = new GenericRepository<Product>(context);
         Orders = new GenericRepository<Order>(context);
         Payments = new GenericRepository<Payment>(context);
