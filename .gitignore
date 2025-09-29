@@ -1,0 +1,117 @@
+﻿# ============================
+# .NET build output
+# ============================
+bin/
+obj/
+out/
+[Bb]uild/
+[Ll]og/
+[Ll]ogs/
+artifacts/
+
+# Visual Studio cache/options
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider cache
+.idea/
+*.sln.iml
+
+# NuGet packages
+*.nupkg
+*.snupkg
+*.nuspec
+*.psmdcp
+packages/
+# If you have a local NuGet feed
+*.nupkg.local
+
+# MSBuild binary and cache
+*.cache
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.ilk
+*.obj
+*.lib
+*.so
+*.dylib
+*.a
+*.app
+*.appx
+*.msix
+*.msixupload
+*.msixbundle
+*.msm
+*.msp
+
+# EF Core migration binaries
+Migrations/*Designer.cs
+Migrations/*.resx
+
+# ============================
+# Secrets & Config
+# ============================
+appsettings.Development.json
+appsettings.Local.json
+appsettings.*.local.json
+secrets.json
+*.secret.json
+*.env
+
+# ============================
+# Logs & Crash reports
+# ============================
+*.log
+*.tlog
+*.trace
+*.dmp
+
+# ============================
+# Coverage & Test output
+# ============================
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+*.trx
+
+# ============================
+# OS generated files
+# ============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ============================
+# Angular / Frontend (nếu chung repo)
+# ============================
+/FE/node_modules/
+/FE/dist/
+/FE/.angular/cache/
+/FE/.npm/
+/FE/.yarn/
+/FE/.parcel-cache/
+/FE/.sass-cache/
+/FE/.turbo/
+/FE/.output/
+
+# Lock files (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ============================
+# Others
+# ============================
+*.bak
+*.tmp
+*.swp
+*.swo
+*.orig
+*.rej
