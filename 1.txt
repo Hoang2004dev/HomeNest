@@ -1,0 +1,62 @@
+﻿dotnet ef dbcontext scaffold "Host=localhost;Port=5432;Database=home_nest;Username=postgres;Password=12345" Npgsql.EntityFrameworkCore.PostgreSQL -o Entities -c HomeNestDbContext --context-dir Data
+
+
+dotnet ef migrations add UpdateEnumsToString -p HomeNest.Infrastructure -s HomeNest.Api --output-dir Data/Migrations
+
+
+dotnet ef database update -p HomeNest.Infrastructure -s HomeNest.Api
+
+
+=================
+
+dotnet ef migrations remove -p HomeNest.Infrastructure -s HomeNest.Api
+
+Tạo Migration trống để EF “đồng bộ” trạng thái enum mà không recreate bảng:
+dotnet ef migrations add UpdateEnumsToString -p HomeNest.Infrastructure -s HomeNest.Api -o Data/Migrations
+
+
+
+
+=======================
+
+HomeNest.Infrastructure/
+│
+├── Data/
+│   ├── HomeNestDbContext.cs          # DbContext
+│   ├── Configurations/               # Fluent API config (EntityTypeConfiguration)
+│   │   ├── UserConfiguration.cs
+│   │   ├── ProductConfiguration.cs
+│   │   └── ...
+│   └── Migrations/                   # EF Core migrations
+│       ├── 20240928123456_Initial.cs
+│       └── HomeNestDbContextModelSnapshot.cs
+│
+├── Identity/
+│   ├── JwtSettings.cs                # cấu hình JWT
+│   ├── TokenService.cs               # sinh access/refresh token
+│   └── PasswordHasher.cs             # hash/verify mật khẩu
+│
+├── Repositories/
+│   ├── Interfaces/
+│   │   ├── IUserRepository.cs
+│   │   ├── IProductRepository.cs
+│   │   └── IGenericRepository.cs
+│   ├── Implementations/
+│   │   ├── UserRepository.cs
+│   │   ├── ProductRepository.cs
+│   │   └── GenericRepository.cs
+│
+├── Services/
+│   ├── Payment/
+│   │   ├── IPaymentService.cs
+│   │   ├── PayPalService.cs
+│   │   └── VNPayService.cs
+│   ├── Storage/
+│   │   ├── IStorageService.cs
+│   │   ├── LocalStorageService.cs
+│   │   └── AzureBlobStorageService.cs
+│   └── Email/
+│       ├── IEmailService.cs
+│       └── SmtpEmailService.cs
+│
+└── DependencyInjection.cs            # Extension method để add service vào DI container

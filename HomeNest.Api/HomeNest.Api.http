@@ -1,0 +1,6 @@
+@HomeNest.Api_HostAddress = http://localhost:5237
+
+GET {{HomeNest.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36408.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeNest.Api", "HomeNest.Api\HomeNest.Api.csproj", "{5C54158E-F905-4CF2-981A-FCCA6D90A257}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeNest.Domain", "HomeNest.Domain\HomeNest.Domain.csproj", "{7FAA9E94-ED00-4356-9207-09CD530D01C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeNest.Infrastructure", "HomeNest.Infrastructure\HomeNest.Infrastructure.csproj", "{51341504-FA92-4FFA-BB2B-7C83F17CAEB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeNest.Application", "HomeNest.Application\HomeNest.Application.csproj", "{EB0C2111-DE8D-4A84-9D8C-FC9A0599B5D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Note", "Note", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		1.txt = 1.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C54158E-F905-4CF2-981A-FCCA6D90A257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C54158E-F905-4CF2-981A-FCCA6D90A257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C54158E-F905-4CF2-981A-FCCA6D90A257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C54158E-F905-4CF2-981A-FCCA6D90A257}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FAA9E94-ED00-4356-9207-09CD530D01C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FAA9E94-ED00-4356-9207-09CD530D01C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FAA9E94-ED00-4356-9207-09CD530D01C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FAA9E94-ED00-4356-9207-09CD530D01C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51341504-FA92-4FFA-BB2B-7C83F17CAEB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51341504-FA92-4FFA-BB2B-7C83F17CAEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51341504-FA92-4FFA-BB2B-7C83F17CAEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51341504-FA92-4FFA-BB2B-7C83F17CAEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0C2111-DE8D-4A84-9D8C-FC9A0599B5D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0C2111-DE8D-4A84-9D8C-FC9A0599B5D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0C2111-DE8D-4A84-9D8C-FC9A0599B5D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0C2111-DE8D-4A84-9D8C-FC9A0599B5D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {313B8013-3FE8-4A85-BB1F-9708710FA1F5}
+	EndGlobalSection
+EndGlobal
